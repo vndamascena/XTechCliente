@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace LXTechClienteAPI.Services.Models
+namespace XTechClienteAPI.Services.Models
 {
     public class AtualizarClientesRequestModel
     {

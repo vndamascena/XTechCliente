@@ -1,8 +1,8 @@
-﻿using LXTechClienteAPI.Services.Models;
+﻿using XTechClienteAPI.Services.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace LXTechClienteAPI.Services.Controllers
+namespace XTechClienteAPI.Services.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

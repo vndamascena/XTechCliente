@@ -1,4 +1,4 @@
-﻿namespace LXTechClienteAPI.Services.Models
+﻿namespace XTechClienteAPI.Services.Models
 {
     public class ClientesGetModel
     {

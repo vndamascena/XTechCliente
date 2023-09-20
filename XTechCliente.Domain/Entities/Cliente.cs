@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LXTechCliente.Domain.Entities
+namespace XTechCliente.Domain.Entities
 {
     public class Cliente
     {

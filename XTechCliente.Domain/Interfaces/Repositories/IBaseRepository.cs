@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LXTechCliente.Domain.Interfaces.Repositories
+namespace XTechCliente.Domain.Interfaces.Repositories
 {
     public interface IBaseRepository<T>
  where T : class

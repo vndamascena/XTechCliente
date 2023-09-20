@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LXTechCliente.Domain.Enums
+namespace XTechCliente.Domain.Enums
 {
     public enum TipoAtividade
     {
