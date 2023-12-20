@@ -11,14 +11,14 @@ namespace XTechCliente.Infra.Data.Repositories
 {
     public class ClienteRepository : BaseRepository<Cliente>, IClienteRpository
     {
-        public Cliente Get(string nome)
+        public Cliente Get(string email)
         {
             using (var dataContext = new DataContext())
             {
-                return dataContext.Clientes.FirstOrDefault(u => u.Nome.Equals(nome));
+                return dataContext.Clientes.FirstOrDefault(u => u.Email.Equals(email));
             }
         }
-
+            
         public Cliente Get(string email, string cpf)
         {
             using (var dataContext = new DataContext())

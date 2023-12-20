@@ -20,7 +20,10 @@ namespace XTechCliente.Infra.Data.Mappings
             builder.Property(c => c.Id).HasColumnName("ID");
             builder.Property(c => c.Nome).HasColumnName("NOME").HasMaxLength(100).IsRequired();
             builder.Property(c => c.Email).HasColumnName("E-MAIL").IsRequired();
+            builder.HasIndex(u => u.Email).IsUnique();
+
             builder.Property(c => c.Cpf).HasColumnName("CPF").IsRequired().HasMaxLength(11);
+            builder.HasIndex(a => a.Cpf).IsUnique();
             builder.Property(c => c.DataNascimento).HasColumnName("DATANASCIMENTO").IsRequired();
             builder.Property(c => c.DataCriacao).HasColumnName("DATACRIACAO").IsRequired();
             builder.Property(c => c.DataAtualizacao).HasColumnName("DATAULTIMAATUALIZACAO").IsRequired();

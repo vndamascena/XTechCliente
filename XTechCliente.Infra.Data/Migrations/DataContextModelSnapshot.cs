@@ -52,7 +52,7 @@ namespace XTechCliente.Infra.Data.Migrations
 
                     b.Property<string>("Email")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
+                        .HasColumnType("nvarchar(450)")
                         .HasColumnName("E-MAIL");
 
                     b.Property<string>("Nome")
@@ -62,6 +62,12 @@ namespace XTechCliente.Infra.Data.Migrations
                         .HasColumnName("NOME");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Cpf")
+                        .IsUnique();
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("CLIENTE", (string)null);
                 });
@@ -99,9 +105,11 @@ namespace XTechCliente.Infra.Data.Migrations
 
             modelBuilder.Entity("XTechCliente.Domain.Entities.HistoricoAtividade", b =>
                 {
-                    b.HasOne("XTechCliente.Domain.Entities.Cliente", null)
+                    b.HasOne("XTechCliente.Domain.Entities.Cliente", "Cliente")
                         .WithMany("Historicos")
                         .HasForeignKey("ClienteId");
+
+                    b.Navigation("Cliente");
                 });
 
             modelBuilder.Entity("XTechCliente.Domain.Entities.Cliente", b =>

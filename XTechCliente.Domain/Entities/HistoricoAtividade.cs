@@ -16,6 +16,11 @@ namespace XTechCliente.Domain.Entities
 
         public string? Descricao { get; set; }
 
+        public Guid? ClienteId { get; set; }
+
+        public Cliente? Cliente { get; set; }
+
+
 
     }
 }
